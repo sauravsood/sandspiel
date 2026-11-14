@@ -431,3 +431,18 @@ img {
 .reversed {
   transform: rotate(180deg);
 }
+
+/* kids.sauravsood.com: bigger buttons for small fingers, room for the
+   Home button in the top-left corner, and no frame counter. */
+#ui button {
+  height: 44px;
+  min-width: 44px;
+  font-size: 20px;
+  padding: 2px 10px;
+  margin: 2px;
+}
+#ui .sizes button { width: 44px; }
+#fps { display: none; }
+@media (orientation: portrait) {
+  #ui { padding-left: 76px; }
+}
