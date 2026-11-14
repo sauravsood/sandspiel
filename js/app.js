@@ -1,41 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { MemoryRouter as Router, Route } from "react-router-dom";
 
 import Info from "./components/info";
 import { Index } from "./components/ui";
-import Browse from "./components/browse";
-import Admin from "./components/admin";
 import Menu from "./components/menu";
-import SignInScreen from "./components/signin";
-import BenchmarkRunner from "./components/benchmarkRunner";
 
 let sizeMap = [2, 5, 10, 18, 30, 45];
 
-function BrowseRouter({ match, location }) {
-  return (
-    <Menu>
-      <Browse location={location} />
-    </Menu>
-  );
-}
-
-function AdminRouter({ match, location }) {
-  return (
-    <Menu>
-      <Admin location={location} />
-    </Menu>
-  );
-}
-
-function SigninRouter({ match, location }) {
-  return (
-    <Menu>
-      <SignInScreen location={location} />
-    </Menu>
-  );
-}
-
+// kids.sauravsood.com copy: only the local sandbox and the Info page.
+// Uploading, browsing, likes and sign-in are removed. A MemoryRouter keeps
+// the address bar fixed, so the app works at any path.
 function AppRouter() {
   return (
     <Router>
@@ -49,11 +24,6 @@ function AppRouter() {
           </Menu>
         )}
       />
-      <Route exact path="/bench" component={BenchmarkRunner} />
-      <Route path="/browse" component={BrowseRouter} />
-      <Route path="/admin" component={AdminRouter} />
-      <Route path="/login" component={SigninRouter} />
-      <Route path="/__/auth/handler" component={SigninRouter} />
     </Router>
   );
 }

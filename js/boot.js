@@ -1,4 +1,4 @@
-import { Species } from "../crate/pkg";
+import { Species } from "../crate/pkg/sandtable";
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));

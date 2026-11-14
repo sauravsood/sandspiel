@@ -6,7 +6,6 @@ const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-const { GenerateSW } = require("workbox-webpack-plugin");
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === "production";
@@ -20,44 +19,19 @@ module.exports = (env, argv) => {
     new CopyWebpackPlugin({
       patterns: [
         "js/styles.css",
-        "manifest.json",
-        { from: "assets/*" },
+        { from: "assets/*.png" },
       ],
     }),
     new HtmlWebpackPlugin({ template: "index.html" }),
   ];
 
-  // Only add service worker in production to avoid watch mode warnings
-  if (isProduction) {
-    plugins.push(
-      new GenerateSW({
-        navigateFallback: "index.html",
-        runtimeCaching: [
-          {
-            urlPattern: /\.html$/,
-            handler: "StaleWhileRevalidate",
-          },
-          {
-            urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-            handler: "CacheFirst",
-            options: {
-              cacheName: "images",
-              expiration: {
-                maxEntries: 300,
-              },
-            },
-          },
-        ],
-      })
-    );
-  }
 
   return {
     entry: "./js/bootstrap.js",
     output: {
       path: dist,
       filename: "[name].[contenthash].js",
-      publicPath: "/",
+      publicPath: "/sand/app/",
     },
     devServer: {
       static: dist,

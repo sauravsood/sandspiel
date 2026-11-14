@@ -3,68 +3,23 @@ import React from "react";
 const Info = () => {
   return (
     <div className="Info">
-      <h1>Sandspiel </h1>
+      <h1>Sand Lab</h1>
       <p>
-        Created by <a href="https://maxbittker.com">max bittker</a>
-      </p>
-      <hr />
-      <br />
-      <p>
-        <a href="https://apps.apple.com/app/id6757886943" target="_blank">
-          <img
-            src="/assets/App_Store_Badge.svg.png"
-            alt="Download on the App Store"
-            className="app-store-badge"
-          />
-        </a>
+        Sand Lab is a copy of <a href="https://sandspiel.club">Sandspiel</a>,
+        a falling sand game made by{" "}
+        <a href="https://maxbittker.com">Max Bittker</a>. Pick an element,
+        then draw with your finger. Everything stays on this iPad.
       </p>
       <p>
-        See also:{" "}
-        <a href="https://studio.sandspiel.club/" target="_blank">
-          Sandspiel Studio
-        </a>{" "}
-        and{" "}
-        <a href="https://orb.farm" target="_blank">
-          orb.farm
-        </a>
-        <img src="https://orb.farm/assets/favicon.ico" className="link-icon" />
-      </p>
-      <br />
-      <p>
-        Welcome, and thanks for coming by! I hope that you enjoy exploring this
-        small game, and it brings you some calm.{" "}
-      </p>
-      <p>
-        Growing up, "falling sand" games like this one provided me hours of
-        entertainment and imagination. I want to particularly thank ha55ii's{" "}
-        <a href="https://dan-ball.jp/en/javagame/dust/">Powder Game</a> as the
-        primary inspiration for sandspiel.
-      </p>
-      <br />
-      <p>
-        If you want to read more the inspiration, architecture, and history of
-        the game, I wrote a blog post (it gets technical in the middle):&nbsp;
-        <a href="https://maxbittker.com/making-sandspiel">Making Sandspiel</a>
-      </p>
-      <br />
-      <p>
-        If you'd like, you can view the{" "}
-        <a href="https://github.com/maxbittker/sandspiel">source code</a> or{" "}
-        <a href="https://github.com/maxbittker/sandspiel/issues">report bugs</a>{" "}
-        on github or feel free to reach out on twitter and I'll try to answer!
-      </p>
-      <br />
-      <p>
-        Lastly, I want to say that if you enjoy this game or share your artwork
-        on it, your opinion is important to me and I want to do my best to
-        ensure sandspiel is a friendly and kind place to play, without bullying,
-        racism, transphobia, homophobia, or any other forms of bigotry. If something is wrong or there's some way I can
-        help, feel free to contact me at <a href="mailto:maxbittker@gmail.com">maxbittker@gmail.com</a> or <a href="https://twitter.com/maxbittker">@maxbittker on twitter.</a>
+        Max says Sandspiel was inspired by ha55ii's{" "}
+        <a href="https://dan-ball.jp/en/javagame/dust/">Powder Game</a>.
+        Sandspiel's <a href="https://github.com/maxbittker/sandspiel">source code</a>{" "}
+        is under the MIT licence.
       </p>
       <br />
       <hr />
       <br />
-      <h2>Element Information:</h2>
+      <h2>What each one does</h2>
       <h4>Wall </h4>
       Indestructible.
       <h4>Sand </h4>
