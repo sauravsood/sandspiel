@@ -446,3 +446,5 @@ img {
 @media (orientation: portrait) {
   #ui { padding-left: 76px; }
 }
+.Info h1 { margin-left: 64px; }
+.menu .x button { height: 48px; min-width: 48px; font-size: 24px; }
